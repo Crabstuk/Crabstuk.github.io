@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+body{
+    background-color: rgb(33, 33, 33);
+    color: white;
+    opacity: 1;
+}
+#miau{
+    display: none;
+}
+
+#guzior{
+    background: none;
+    border: none;
+}
+    </style>
+    <meta content="KotChceCos">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://www.bing.com/th?id=OIP.9rsecSF36ccUo_qsHDqM1QHaHa&w=150&h=150&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1 id="toH1">Kot coś chce.</h1><br><br>
+    <br><br>
+    <audio  controls  autoplay id="miau"  loop src="miau.mp3"></audio>
+    <audio id="fanfary" type="audio/mp3" src="fanfary.mp3" ></audio>
+    <audio id="mrrr" type="audio/mp3" src="mrrr.mp3"></audio>
+    <button id="guzior"><img id="kciuk" src="https://www.bing.com/th?id=OIP.SCly-P8DU9jN5nJ3R2xXcQHaE6&w=176&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2>"></button>
+    <br><br>
+    <p>Pogłaszcz - naciśnij 1</p>
+    <p>Nakarm - naciśnij 2</p>
+    <p id="powrot"></p>
+    <script>
+    var ToH1 = document.querySelector("#toH1")
+
+        var powrot = document.querySelector("#powrot")
+        
+        var mrrr = document.querySelector("#mrrr")
+        
+        var lista = document.querySelector("#lista")
+        
+        var obraz = document.querySelector("#kciuk")
+        
+        var miau = document.querySelector("#miau")
+        
+        var fanfar = document.querySelector("#fanfary")
+        
+        document.addEventListener("keydown", function(event){
+            if(event.key == "3") {
+                location.reload()
+            }
+        
+            if (event.key == "1") {
+                ToH1.textContent = "Pogłaszciłeś kota"
+                obraz.src ="https://th.bing.com/th?id=OIP.2kDNTr0d-Lal1NtTbhthUQHaIT&w=236&h=264&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2"
+                miau.muted = "true";
+                console.log("muted miau")
+                miau.muted = "true";
+                console.log(miau)
+                fanfar.play()
+                powrot.textContent = "Powrót - naciśnij 3"
+        
+            }
+        
+            if(event.key == "2") {
+                miau.muted = "true";
+                obraz.src = "https://www.bing.com/th?id=OIP.P8K8tCVwpymtgLnODPefiwHaD8&w=223&h=150&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2"
+                mrrr.play();
+                ToH1.textContent = "Nakarmiłeś kota."; 
+                powrot.textContent = "Powrót - naciśnij 3"
+                       
+            }
+        
+        })
+        
+        
+        
+        </script>
+    </div>    
+</body>
+</html>
