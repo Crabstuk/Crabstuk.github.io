@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
     <style> 
+button{
+    outline: none;
+    text-decoration: underline;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    cursor: pointer;
+}
 #doKalkulatora{
     color: white;
     opacity: 0.7;
@@ -35,15 +42,21 @@ body{
     <audio  controls  autoplay id="miau"  loop src="miau.mp3"></audio>
     <audio id="fanfary" type="audio/mp3" src="fanfary.mp3" ></audio>
     <audio id="mrrr" type="audio/mp3" src="mrrr.mp3"></audio>
-    <button id="guzior"><img id="kciuk" src="https://www.bing.com/th?id=OIP.SCly-P8DU9jN5nJ3R2xXcQHaE6&w=176&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2>"></button>
+    <img id="kciuk" src="https://www.bing.com/th?id=OIP.SCly-P8DU9jN5nJ3R2xXcQHaE6&w=176&h=185&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2>">
     <br><br>
-    <p>Pogłaszcz - naciśnij 1</p>
-    <p>Nakarm - naciśnij 2</p>
-    <p id="powrot"></p>
+    <button id="poglaszcz"><p>Pogłaszcz - naciśnij 1</p></button><br>
+    <button id="nakarm"><p>Nakarm - naciśnij 2</p></button><br>
+    <button id="wroc"><p id="powrot"></p></button><br>
     <script>
     var ToH1 = document.querySelector("#toH1")
 
         var powrot = document.querySelector("#powrot")
+
+        var wroc = document.querySelector("#wroc");
+
+        var nakarm = document.querySelector("#nakarm");
+
+        var poglaszcz = document.querySelector("#poglaszcz");
         
         var mrrr = document.querySelector("#mrrr")
         
@@ -60,7 +73,7 @@ body{
                 location.reload()
             }
         
-            if (event.key == "1") {
+            if (event.key == "1" ) {
                 ToH1.textContent = "Pogłaszciłeś kota"
                 obraz.src ="https://th.bing.com/th?id=OIP.2kDNTr0d-Lal1NtTbhthUQHaIT&w=236&h=264&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2"
                 miau.muted = "true";
@@ -83,7 +96,29 @@ body{
         
         })
         
-        
+        poglaszcz.addEventListener("click", function(event){
+            ToH1.textContent = "Pogłaszciłeś kota"
+                obraz.src ="https://th.bing.com/th?id=OIP.2kDNTr0d-Lal1NtTbhthUQHaIT&w=236&h=264&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2"
+                miau.muted = "true";
+                console.log("muted miau")
+                miau.muted = "true";
+                console.log(miau)
+                fanfar.play()
+                powrot.textContent = "Powrót - naciśnij 3"
+        });
+
+        nakarm.addEventListener("click", function(event){
+            miau.muted = "true";
+                obraz.src = "https://www.bing.com/th?id=OIP.P8K8tCVwpymtgLnODPefiwHaD8&w=223&h=150&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2"
+                mrrr.play();
+                ToH1.textContent = "Nakarmiłeś kota."; 
+                powrot.textContent = "Powrót - naciśnij 3"
+                       
+        })
+
+        powrot.addEventListener("click", function(event){
+            location.reload();
+        })
         
         </script>
     </div>    
