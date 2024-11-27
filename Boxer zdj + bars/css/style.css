@@ -1,0 +1,60 @@
+body{ 
+    background-color: rgb(33, 33, 33);
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#website{
+    border: solid;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 2px;  
+}
+
+.bar{
+    color: white;
+    background-color: black;
+    height: 60px;
+    opacity: 0.8;   
+    display: flex;
+    align-items: stretch;   
+    justify-content: space-around;
+}
+
+
+.box{
+    border: solid;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    background-color: #ffffff;
+    opacity: 0.5;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#imageOfBoxerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imageOfBoxer {
+    opacity: 0.1;
+    scale: 1;
+    width: 1875px; 
+    max-height: 810px;
+}
+
+p:nth-of-type(1){
+    align-self: flex-start;
+}
