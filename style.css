@@ -1,0 +1,42 @@
+@font-face{
+    font-family: gliker;
+    src: url(Gliker.ttf);
+}
+html{
+    background-color: #c6c5c5;
+}
+.outputDiv{
+    width: 750px;
+    height: 150px;
+    font-size: 125%;
+    margin-top: 3%;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+}
+.inputDiv{
+    width: 229px;
+    height: 105px;
+   display: flex;
+   margin-top: 30%;
+   justify-self: center;
+   align-self: center;
+   justify-content: center;
+   align-items: center;
+   background-color: #525752;
+}
+#input{
+    width: 100%;
+    height: 100%;
+    font-size: 150%;
+    border: none;
+    cursor: pointer;
+background-color: transparent;
+color: #000000;
+font-family: gliker;
+}
+#output{
+    color: #986b46ea;
+    font-family: gliker;
+}
