@@ -12,8 +12,7 @@ return odpowiedz.json()
 }).then(dane =>{
     console.log(dane.data);
      cosOKotach = dane.data;
+     output.innerText = cosOKotach;
 });
-output.innerText = ""
-output.innerText = cosOKotach;
 console.log(output.innerText)
 })
